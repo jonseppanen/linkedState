@@ -3,6 +3,14 @@
     "version": "1.0.0",
     "description": "Context alternative for react. Link multiple states within components using a unique key, and set them/update them globally.",
     "main": "index.js",
+    "repository": "jonseppanen/linkedState",
+    "keywords": [
+        "context",
+        "linked",
+        "state",
+        "react",
+        "synced"
+    ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
