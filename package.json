@@ -4,6 +4,7 @@
     "description": "Context alternative for react. Link multiple states within components using a unique key, and set them/update them globally.",
     "main": "dist/index",
     "source": "src/index.js",
+    "typings": "src/global.d.ts",
     "repository": "jonseppanen/linkedState",
     "keywords": [
         "context",
