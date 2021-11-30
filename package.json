@@ -2,8 +2,8 @@
     "name": "linkedstate",
     "version": "2.0.4",
     "description": "Context alternative for react. Link multiple states within components using a unique key, and set them/update them globally.",
-    "main": "src/index",
-    "typings": "dist/index",
+    "main": "src/index.js",
+    "source": "src/index.js",
     "repository": "jonseppanen/linkedState",
     "keywords": [
         "context",
@@ -13,11 +13,18 @@
         "synced"
     ],
     "scripts": {
-        "test": "echo \"Error: no test specified\""
+        "test": "echo \"Error: no test specified\"",
+        "build": "babel src -d dist"
     },
     "author": "jonseppanen",
-    "license": "ISC",
-    "dependencies": {
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^17.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
         "react": "^17.0.0",
         "react-dom": "^17.0.0"
     }
