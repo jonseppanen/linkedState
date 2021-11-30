@@ -36,10 +36,7 @@ var awaitSetter = /*#__PURE__*/function () {
 
 var updateAllWatchers = (key, value) => {
   //Update all components watching the state
-  console.log(global[lsUUID][key].localStateSetters);
-
   for (var localStateSetter of global[lsUUID][key].localStateSetters) {
-    console.log(value);
     localStateSetter(value);
   }
 };
@@ -73,7 +70,6 @@ var _LS_watch = function _LS_watch(key, localStateSetter) {
       currentValue: initialValue,
       localStateSetters: [localStateSetter]
     };
-    console.log(global[lsUUID][key]);
     return;
   } //Add the local state setter if it doesnt exist yet in the registry.
 
@@ -98,7 +94,6 @@ var _LS_unwatch = (key, localStateSetter) => {
 
 var _LS_get = key => {
   //Universal get command of current linked state by key, does not require react to perform.
-  console.log(global[lsUUID][key]);
   if (key === undefined || !global[lsUUID][key]) return undefined;
   return global[lsUUID][key].currentValue;
 }; //Getter and Setter for the global state
