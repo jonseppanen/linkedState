@@ -2,7 +2,7 @@
     "name": "linkedstate",
     "version": "2.0.5",
     "description": "Context alternative for react. Link multiple states within components using a unique key, and set them/update them globally.",
-    "main": "src/index.js",
+    "main": "dist/index",
     "source": "src/index.js",
     "repository": "jonseppanen/linkedState",
     "keywords": [
