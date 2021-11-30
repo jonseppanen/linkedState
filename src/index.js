@@ -16,9 +16,7 @@ const awaitSetter = async (key, value) => {
 
 const updateAllWatchers = (key, value) => {
     //Update all components watching the state
-    console.log(global[lsUUID][key].localStateSetters);
     for (const localStateSetter of global[lsUUID][key].localStateSetters) {
-        console.log(value);
         localStateSetter(value);
     }
 };
@@ -47,7 +45,6 @@ const _LS_watch = (key, localStateSetter, initialValue = undefined) => {
     if (!global[lsUUID][key]) {
         //Initialize and exit if this is the only watching component.
         global[lsUUID][key] = { currentValue: initialValue, localStateSetters: [localStateSetter] };
-        console.log(global[lsUUID][key]);
         return;
     }
 
@@ -71,7 +68,6 @@ const _LS_unwatch = (key, localStateSetter) => {
 
 const _LS_get = (key) => {
     //Universal get command of current linked state by key, does not require react to perform.
-    console.log(global[lsUUID][key]);
     if (key === undefined || !global[lsUUID][key]) return undefined;
 
     return global[lsUUID][key].currentValue;
